@@ -1,16 +1,15 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class DrinkFacadeTest {
+class ClienteTest {
 
     @Test
-    void deveCriarMargarita() {
-        DrinkFacade drinkFacade = new DrinkFacade();
-        Drink margarita = drinkFacade.createMargarita();
+    void deveRetornarMargarita() {
+        Cliente cliente = new Cliente();
+        Drink margarita = cliente.solicitarMargarita();
 
         assertEquals(1, margarita.getCodigo());
         assertEquals("Margarita", margarita.getNome());
@@ -24,9 +23,9 @@ class DrinkFacadeTest {
     }
 
     @Test
-    void deveCriarMojito() {
-        DrinkFacade drinkFacade = new DrinkFacade();
-        Drink mojito = drinkFacade.createMojito();
+    void deveRetornarMojito() {
+        Cliente cliente = new Cliente();
+        Drink mojito = cliente.solicitarMojito();
 
         assertEquals(2, mojito.getCodigo());
         assertEquals("Mojito", mojito.getNome());
@@ -40,9 +39,9 @@ class DrinkFacadeTest {
     }
 
     @Test
-    void deveCriarPinaColadaSemAlcool() {
-        DrinkFacade drinkFacade = new DrinkFacade();
-        Drink PinaColada = drinkFacade.createPinaColada();
+    void deveRetornarPinaColadaSemAlcool() {
+        Cliente cliente = new Cliente();
+        Drink PinaColada = cliente.solicitarPinaColadaSemAlcool();
 
         assertEquals(3, PinaColada.getCodigo());
         assertEquals("Pina Colada sem Álcool", PinaColada.getNome());
