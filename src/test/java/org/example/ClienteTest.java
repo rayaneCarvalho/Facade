@@ -6,17 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ClienteTest {
 
     @Test
-    void deveRetornarPendenciaSetorCreditoEmprestimo() {
-        Cliente cliente = new Cliente();
-        SetorCredito.getInstancia().addClientePendente(cliente);
-
-        assertFalse(cliente.solicitarEmprestimo());
-    }
-
-    @Test
     void deveRetornarPendenciaSetorCobrancaEmprestimo() {
         Cliente cliente = new Cliente();
-        SetorCobranca.getInstancia().addClientePendente(cliente);
+        ServicoCobranca.getInstancia().addClientePendente(cliente);
 
         assertFalse(cliente.solicitarEmprestimo());
     }
@@ -24,7 +16,7 @@ public class ClienteTest {
     @Test
     void deveRetornarPendenciaSetorAtendimentoEmprestimo() {
         Cliente cliente = new Cliente();
-        SetorAtendimento.getInstancia().addClientePendente(cliente);
+        ServicoInvestimento.getInstancia().addClientePendente(cliente);
 
         assertFalse(cliente.solicitarEmprestimo());
     }

@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Setor {
+public abstract class Servico {
 
     private List<Cliente> clientesComPendencia = new ArrayList<>();
 
